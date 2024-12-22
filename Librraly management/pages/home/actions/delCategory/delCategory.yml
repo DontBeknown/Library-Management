@@ -1,0 +1,59 @@
+id: '17145863230740.9473712178576403'
+kind: workflow
+name: delCategory
+nameConfigured: true
+steps:
+  - id: '17145863295830.6653286150657354'
+    type: DELETE_ENTITY
+    name: delete
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.category
+        valueType: string
+      - type: filter
+        value:
+          - column: category_id
+            operation: '='
+            value:
+              value: '{{ui.publicCategoryTable.deletedRow.data.category_id}}'
+        valueType: custom
+      - type: bulk
+        value: false
+        valueType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: true
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.delCategory.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.delCategory.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.delCategory.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

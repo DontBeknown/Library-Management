@@ -1,0 +1,240 @@
+id: '17146053991660.7648160497954404'
+definitionId: detail
+parentSlotId: '17146053253000.4368319030907557'
+styles:
+  xl:
+    gridItem:
+      x: 17
+      y: 16
+      w: 6
+      h: 160
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: '{{actions.loadYourInfo.data[0]}}'
+  name: loadpublicstaffDetail
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Your information
+actions: {}
+slots:
+  - id: '17146053991660.59882849038923'
+    name: structure
+    children:
+      - id: '17146055128630.7937564066750837'
+        definitionId: atomicNumber
+        parentSlotId: '17146053991660.59882849038923'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber85
+          prop: staff_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          alignment: left
+        index: 0
+        slots: []
+      - id: '17146055128630.12730514509348878'
+        definitionId: atomicNumber
+        parentSlotId: '17146053991660.59882849038923'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber140
+          prop: your_role_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 1
+        slots: []
+      - id: '17146055128630.7956762877923389'
+        definitionId: atomicString
+        parentSlotId: '17146053991660.59882849038923'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString52
+          prop: name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 3
+        slots: []
+      - id: '17146055128630.47774572160611917'
+        definitionId: atomicString
+        parentSlotId: '17146053991660.59882849038923'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString53
+          prop: surname
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 4
+        slots: []
+      - id: '17146055128630.25499583576651874'
+        definitionId: atomicString
+        parentSlotId: '17146053991660.59882849038923'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString54
+          prop: email
+          primaryKey: false
+          inputType: email
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 7
+        slots: []
+      - id: '17146055128630.08088606102088947'
+        definitionId: atomicString
+        parentSlotId: '17146053991660.59882849038923'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString55
+          prop: phone
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 8
+        slots: []
+      - id: '17146055128630.3976479993433646'
+        definitionId: atomicString
+        parentSlotId: '17146053991660.59882849038923'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString56
+          prop: username
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 5
+        slots: []
+      - id: '17146055128630.4671593936787568'
+        definitionId: atomicDateTime
+        parentSlotId: '17146053991660.59882849038923'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicDateTime25
+          prop: hire_date
+          primaryKey: false
+          timeFormat:
+            value: ''
+            dataValue: HH:mm
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 9
+        slots: []
+      - id: '17146055128630.1164568735031768'
+        definitionId: atomicString
+        parentSlotId: '17146053991660.59882849038923'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString103
+          prop: password
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          viewContentHidden:
+            value: false
+            dataValue: 'false'
+            withData: true
+        index: 6
+        slots: []
+      - id: '17146055128630.41337549853246847'
+        definitionId: atomicString
+        parentSlotId: '17146053991660.59882849038923'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString104
+          prop: role_name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 2
+        slots: []
+      - id: '17146055128630.5344203695660494'
+        definitionId: atomicCurrency
+        parentSlotId: '17146053991660.59882849038923'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicCurrency5
+          prop: salary
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          currencyCode:
+            value: THB
+            dataValue: USD
+            withData: false
+        index: 10
+        slots: []

@@ -1,0 +1,8 @@
+mode: structured
+valueByMode:
+  structured:
+    role_name:
+      value: '{{ui.RoleForm.value.role_name}}'
+    salary:
+      value: '{{ui.RoleForm.value.salary}}'
+  custom: ''

@@ -1,0 +1,99 @@
+id: '17146408639090.45252286978672096'
+definitionId: popupForm
+parentSlotId: '17144220952460.11464953985548076'
+styles:
+  xl:
+    gridItem:
+      x: 18
+      y: 573
+      w: 3
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 1012
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: ''
+  name: publicPublisherPopupform
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Publisher form
+  buttonText: Add publisher
+  submitBtnTitle: Add
+  closeOnSuccess: true
+actions:
+  submitEvent:
+    - action: '17146410642820.38482325902938075'
+      paramCode: ''
+      index: 0
+slots:
+  - id: '17146408639090.9604054086970453'
+    name: structure
+    children:
+      - id: '17146408639900.6329455415601768'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString120
+          prop: publisher_name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17146408639090.9604054086970453'
+        index: 0
+        slots: []
+      - id: '17146408639900.055472555699753956'
+        definitionId: atomicString
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString121
+          prop: address
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        parentSlotId: '17146408639090.9604054086970453'
+        index: 1
+        slots: []

@@ -1,0 +1,6 @@
+mode: structured
+valueByMode:
+  structured:
+    author_name:
+      value: '{{ui.addAuthorForm.value.author_name}}'
+  custom: ''

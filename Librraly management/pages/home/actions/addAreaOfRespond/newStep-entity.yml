@@ -1,0 +1,8 @@
+mode: structured
+valueByMode:
+  structured:
+    staff_id:
+      value: '{{ui.publicstafftablePopupform.value.staff_id}}'
+    subcategory_id:
+      value: '{{ui.publicstafftablePopupform.value.subcategory_id}}'
+  custom: ''

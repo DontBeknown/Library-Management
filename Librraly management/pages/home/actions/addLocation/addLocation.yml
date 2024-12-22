@@ -1,0 +1,80 @@
+id: '17145939927110.027006735812631355'
+kind: workflow
+name: addLocation
+nameConfigured: true
+steps:
+  - id: '17145939979110.23858813355230923'
+    type: CREATE_ENTITY
+    name: create
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.location
+        valueType: string
+      - type: entity
+        value: ./create-entity.yml
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17145941664970.6902070283243744'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '17145924245320.02135047787152411'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./execute-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.addLocation.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.addLocation.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.addLocation.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

@@ -1,0 +1,28 @@
+id: '17144861852020.7806493903058278'
+definitionId: tab
+parentSlotId: '17144220952460.935462285036265'
+styles: {}
+properties:
+  name: tab4
+  title: Fine
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  visible:
+    value: true
+    dataValue: |-
+      if({{state.adminData}} === "2" || {{state.adminData}} === "1")
+        return true
+      else
+        return false
+    withData: true
+index: 3
+slots:
+  - id: '17144861852020.5630848730560725'
+    name: content
+    children:
+      - publicBorrowingfineTable.yml
+      - publicAccountingTable.yml
+      - PayForm.yml
+      - FineTitleSearchBar.yml
+      - nameFineSearchBar.yml

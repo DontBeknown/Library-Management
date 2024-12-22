@@ -1,0 +1,123 @@
+id: '17145020898920.20349690300223133'
+kind: workflow
+name: EditAccounting
+nameConfigured: true
+steps:
+  - id: '17145023065750.427437313964526'
+    type: customSQLQuery
+    name: query
+    params:
+      - type: query
+        value: ./query-query.sql
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+        mustSelectFirst: true
+      - type: preparedQuery
+        value: ./query-preparedQuery.sql
+        valueType: interpolatedValue
+      - type: preparedQueryParams
+        value:
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.AccountingTable.editedRow.data.transaction_date)
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.AccountingTable.editedRow.data.amount)
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.AccountingTable.editedRow.data.type)
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.AccountingTable.editedRow.data.category)
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.AccountingTable.editedRow.data.description)
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.AccountingTable.editedRow.data.staff_id)
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.AccountingTable.editedRow.data.transaction_id)
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: stepVersion
+        value: 2
+        valueType: custom
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17145025747700.06591108344552032'
+    type: LOAD_COLLECTION
+    name: load
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: custom
+        mustSelectFirst: true
+      - type: resourceId
+        value: public.accounting
+        valueType: custom
+        mustSelectFirst: true
+      - type: filters
+        value: []
+        valueType: custom
+        interpolationType: string
+      - type: ordering
+        value:
+          limit:
+            value: 1000
+          offset:
+            value: ''
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+        interpolationType: string
+      - type: additionalParams
+        value: []
+        valueType: custom
+        interpolationType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: false
+mode: manual
+modeConfigured: true
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.EditAccounting.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.EditAccounting.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.EditAccounting.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false
+parentPageId: '1'

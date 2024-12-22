@@ -1,0 +1,286 @@
+id: '17144026775290.9285195630805008'
+definitionId: smartTable
+parentSlotId: '17144220952460.11464953985548076'
+styles:
+  xl:
+    gridItem:
+      x: 1
+      y: 31
+      w: 14
+      h: 114
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      id: '17144026775290.9285195630805008'
+      x: 1
+      y: 0
+      w: 18
+      h: 114
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: '{{actions.SearchBookByTitle.data}}'
+  name: BooksTable
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Books
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadBooks.loading}}'
+    value: false
+  showReloadAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+  showExportAction:
+    value: false
+    dataValue: 'true'
+    withData: false
+  disableRowSelection:
+    value: false
+    dataValue: 'false'
+    withData: false
+  heightMode: fixed
+  limit: |
+    10
+  showDeleteAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+  __UIBAKERY__SHOW__CONDITION__CODE__: ''
+actions:
+  smartTableReload:
+    - action: '17144026937710.24756328117172788'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+  smartTableCreate: []
+  smartTableEdit: []
+  smartTableBulkEdit: []
+  smartTableDelete:
+    - action: '17144079719950.028116329951078045'
+      paramCode: ''
+      index: 1
+  smartTableRowSelect: []
+  smartTableRowClick:
+    - action: '17145962009570.08057422736494813'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 2
+  smartTablePageSelect: []
+  uiOnPageSizeChange: []
+  smartTableFilterChange: []
+  smartTableSortChange: []
+  uiOnCellChangeTrigger: []
+slots:
+  - id: '17144026775290.40463313917086774'
+    name: columns
+    children:
+      - id: '17144027390010.34312949155140315'
+        definitionId: atomicNumber
+        parentSlotId: '17144026775290.40463313917086774'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber5
+          prop: book_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 66
+          widthMode: fixed
+          filter: true
+        index: 0
+        actions: {}
+        slots: []
+      - id: '17144027390010.6981219990213128'
+        definitionId: atomicString
+        parentSlotId: '17144026775290.40463313917086774'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString9
+          prop: title
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 155
+          widthMode: fixed
+          filter: true
+        index: 2
+        actions: {}
+        slots: []
+      - id: '17144027390010.8590256266873191'
+        definitionId: atomicNumber
+        parentSlotId: '17144026775290.40463313917086774'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber6
+          prop: publisher_id
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 129
+          widthMode: fixed
+          filter: true
+        index: 3
+        actions: {}
+        slots: []
+      - id: '17144027390010.03795580607818527'
+        definitionId: atomicNumber
+        parentSlotId: '17144026775290.40463313917086774'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber7
+          prop: publication_year
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 4
+        slots: []
+      - id: '17144027390010.05274079733931214'
+        definitionId: atomicNumber
+        parentSlotId: '17144026775290.40463313917086774'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber8
+          prop: subcategory_id
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 127
+          widthMode: fixed
+          filter: true
+        index: 5
+        actions: {}
+        slots: []
+      - id: '17144027390010.06619144453541481'
+        definitionId: atomicString
+        parentSlotId: '17144026775290.40463313917086774'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString11
+          prop: isbn
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          filter: true
+          widthMode: fixed
+          width: 131
+        index: 1
+        actions: {}
+        slots: []
+      - id: '17144095929740.7678472542253894'
+        definitionId: atomicString
+        parentSlotId: '17144026775290.40463313917086774'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString15
+          prop: publisher_name
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 8
+        slots: []
+      - id: '17144231227130.8767250534430486'
+        definitionId: atomicNumber
+        parentSlotId: '17144026775290.40463313917086774'
+        styles:
+          xl: {}
+        properties:
+          name: atomicNumber3
+          prop: book_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 117
+          widthMode: fixed
+        index: 6
+        actions: {}
+        slots: []
+      - id: '17144231457940.6704623314741414'
+        definitionId: atomicString
+        parentSlotId: '17144026775290.40463313917086774'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString3
+          prop: title
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 7
+        slots: []
+      - id: '17144232353310.6566514984922813'
+        definitionId: atomicNumber
+        parentSlotId: '17144026775290.40463313917086774'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber4
+          prop: publisher_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 9
+        slots: []

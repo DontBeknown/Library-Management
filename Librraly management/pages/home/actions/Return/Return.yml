@@ -1,0 +1,464 @@
+id: '17144356943070.7586883239014792'
+kind: workflow
+name: Return
+nameConfigured: true
+steps:
+  - id: '17144359555120.36292899913347365'
+    type: customSQLQuery
+    name: UpdateReturnDate
+    params:
+      - type: query
+        value: ./UpdateReturnDate-query.sql
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+        mustSelectFirst: true
+      - type: preparedQuery
+        value: ./UpdateReturnDate-preparedQuery.sql
+        valueType: interpolatedValue
+      - type: preparedQueryParams
+        value:
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.publicborrowingtablePopupform.value.Return_Date)
+          - __UI_BAKERY__FORMAT_IF_DATE__(state.staff_id)
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.publicborrowingtablePopupform.value.book_copy_id)
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: stepVersion
+        value: 2
+        valueType: custom
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
+    nameConfigured: true
+  - id: '17144358390180.8439820595041707'
+    type: customSQLQuery
+    name: SetAvailiable
+    params:
+      - type: query
+        value: ./SetAvailiable-query.sql
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: custom
+        mustSelectFirst: true
+      - type: preparedQuery
+        value: ./SetAvailiable-preparedQuery.sql
+        valueType: interpolatedValue
+      - type: preparedQueryParams
+        value:
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.publicborrowingtablePopupform.value.book_copy_id)
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: stepVersion
+        value: 2
+        valueType: custom
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    paused: false
+    nameConfigured: true
+  - id: '17147529588320.9606099481902015'
+    type: customSQLQuery
+    name: query
+    params:
+      - type: query
+        value: ./query-query.sql
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: custom
+        mustSelectFirst: true
+      - type: preparedQuery
+        value: ./query-preparedQuery.sql
+        valueType: interpolatedValue
+      - type: preparedQueryParams
+        value:
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.publicborrowingtablePopupform.value.book_copy_id)
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: stepVersion
+        value: 2
+        valueType: custom
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17147530054840.16484415245777995'
+    type: condition
+    name: checkReserve
+    params:
+      - type: code
+        value: ./checkReserve.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: steps
+        value:
+          - condition: true
+            steps:
+              - id: '17144413160890.9782331956544719'
+                type: customSQLQuery
+                name: Reserve
+                params:
+                  - type: query
+                    value: ./Reserve-query.sql
+                    valueType: interpolatedValue
+                    interpolationType: string
+                  - type: datasourceId
+                    value: UI Bakery Postgres
+                    valueType: custom
+                    mustSelectFirst: true
+                  - type: preparedQuery
+                    value: ./Reserve-preparedQuery.sql
+                    valueType: interpolatedValue
+                  - type: preparedQueryParams
+                    value:
+                      - >-
+                        __UI_BAKERY__FORMAT_IF_DATE__(ui.publicborrowingtablePopupform.value.book_copy_id)
+                    valueType: custom
+                  - type: customDatabaseName
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: stepVersion
+                    value: 2
+                    valueType: custom
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+                nameConfigured: true
+                paused: false
+              - id: '17147732163180.6513229552431716'
+                type: UPDATE_ENTITY
+                name: update
+                params:
+                  - type: datasourceId
+                    value: UI Bakery Postgres
+                    valueType: string
+                  - type: resourceId
+                    value: public.bookcopies
+                    valueType: string
+                  - type: filter
+                    value:
+                      - column: book_copy_id
+                        operation: '='
+                        value:
+                          value: >-
+                            {{ui.publicborrowingtablePopupform.value.book_copy_id}}
+                    valueType: custom
+                  - type: entity
+                    value: ./update-entity.yml
+                    valueType: custom
+                  - type: replace
+                    value: false
+                    valueType: string
+                  - type: bulk
+                    value: false
+                    valueType: string
+                  - type: customDatabaseName
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+              - id: '17147387901080.7271472764841107'
+                type: executeAction
+                name: execute3
+                params:
+                  - type: action
+                    value: '17144397882590.4949792222510636'
+                    valueType: custom
+                  - type: isActionsLibraryCall
+                    value: false
+                    valueType: custom
+                  - type: customParams
+                    value: ./execute3-customParams.js
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+              - id: '17144359081250.23441139314029846'
+                type: executeAction
+                name: execute
+                params:
+                  - type: action
+                    value: '17144227211470.6443568134262974'
+                    valueType: custom
+                  - type: isActionsLibraryCall
+                    value: false
+                    valueType: custom
+                  - type: customParams
+                    value: ./execute-customParams.js
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+              - id: '17144361665160.8778364068126085'
+                type: executeAction
+                name: execute2
+                params:
+                  - type: action
+                    value: '17144253453710.5838288934968041'
+                    valueType: custom
+                  - type: isActionsLibraryCall
+                    value: false
+                    valueType: custom
+                  - type: customParams
+                    value: ./execute2-customParams.js
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+                nameConfigured: true
+          - condition: false
+            steps:
+              - id: '17147534166210.9913552437358679'
+                type: executeAction
+                name: execute4
+                params:
+                  - type: action
+                    value: '17144397882590.4949792222510636'
+                    valueType: custom
+                  - type: isActionsLibraryCall
+                    value: false
+                    valueType: custom
+                  - type: customParams
+                    value: ./execute4-customParams.js
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+              - id: '17147534198250.05206612963249335'
+                type: executeAction
+                name: execute5
+                params:
+                  - type: action
+                    value: '17144227211470.6443568134262974'
+                    valueType: custom
+                  - type: isActionsLibraryCall
+                    value: false
+                    valueType: custom
+                  - type: customParams
+                    value: ./execute5-customParams.js
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+              - id: '17147534237300.38394771857099785'
+                type: executeAction
+                name: execute6
+                params:
+                  - type: action
+                    value: '17144253453710.5838288934968041'
+                    valueType: custom
+                  - type: isActionsLibraryCall
+                    value: false
+                    valueType: custom
+                  - type: customParams
+                    value: ./execute6-customParams.js
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+                nameConfigured: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+  - id: '17144878227190.5704378587691892'
+    type: condition
+    name: CheckFine
+    params:
+      - type: code
+        value: ./CheckFine.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: steps
+        value:
+          - condition: true
+            steps:
+              - id: '17144878931730.5171591373389999'
+                type: CREATE_ENTITY
+                name: create
+                params:
+                  - type: datasourceId
+                    value: UI Bakery Postgres
+                    valueType: string
+                  - type: resourceId
+                    value: public.borrowingfine
+                    valueType: string
+                  - type: entity
+                    value: ./create-entity.yml
+                    valueType: custom
+                  - type: customDatabaseName
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 2
+                fallthroughError: false
+                isChanged: true
+                nameConfigured: true
+          - condition: false
+            steps: []
+        valueType: custom
+    level: 1
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.Return.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.Return.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.Return.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

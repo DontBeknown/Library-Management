@@ -1,0 +1,8 @@
+mode: structured
+valueByMode:
+  structured:
+    subcategory_name:
+      value: '{{ui.SubcategoryForm.value.subcategory_name}}'
+    category_id:
+      value: '{{ui.SubcategoryForm.value.category_id}}'
+  custom: ''

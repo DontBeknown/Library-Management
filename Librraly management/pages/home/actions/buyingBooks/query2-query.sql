@@ -1,0 +1,2 @@
+INSERT INTO public.accounting (transaction_id,transaction_date, amount, type, category, description, staff_id)
+VALUES (DEFAULT, {{ui.newCopiesForm.value.acquisition_date}}, {{ui.newCopiesForm.value.cost}}, '"expense"', 'Buy book', {{ui.newCopiesForm.value.description}}, {{ui.newCopiesForm.value.staff_id}});

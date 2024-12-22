@@ -1,0 +1,54 @@
+id: '17144217057320.36092623168832505'
+definitionId: stringEdit
+parentSlotId: '17144220952460.11464953985548076'
+styles:
+  xl:
+    gridItem:
+      x: 1
+      y: 19
+      w: 8
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      id: '17144217057320.36092623168832505'
+      x: 1
+      y: 114
+      w: 8
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: SearchBar2
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  labelConfig:
+    text: Search Title
+    position: horizontal
+    align: left
+  labelWidth: 21
+  __UIBAKERY__SHOW__CONDITION__CODE__: ''
+actions:
+  valueChange:
+    - action: '17144190609270.8263973976121055'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  enter: []
+  focusEvent: []
+  blurEvent: []
+  init: []
+slots: []

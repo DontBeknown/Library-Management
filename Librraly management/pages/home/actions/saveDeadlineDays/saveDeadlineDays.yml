@@ -1,0 +1,41 @@
+id: '17150968087980.015654346373054517'
+kind: workflow
+name: saveDeadlineDays
+nameConfigured: true
+steps:
+  - id: '17150968130460.7966793836115629'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17150980556990.9954480892651236'
+        valueType: string
+      - type: value
+        value: parseInt({{ui.deadLineDaysInput.value}}, 10)
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.saveDeadlineDays.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.saveDeadlineDays.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.saveDeadlineDays.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

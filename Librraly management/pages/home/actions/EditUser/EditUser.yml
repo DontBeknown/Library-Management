@@ -1,0 +1,94 @@
+id: '17145424171500.9914704212210523'
+kind: workflow
+name: EditUser
+nameConfigured: true
+steps:
+  - id: '17146037650260.03708351753438577'
+    type: UPDATE_ENTITY
+    name: update
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.users
+        valueType: string
+      - type: filter
+        value:
+          - column: user_id
+            operation: '='
+            value:
+              value: '{{ui.userEditForm.value.user_id}}'
+        valueType: custom
+      - type: entity
+        value: ./update-entity.yml
+        valueType: custom
+      - type: replace
+        value: false
+        valueType: string
+      - type: bulk
+        value: false
+        valueType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17145429018590.9974402563966982'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '17145396424310.24857656927719618'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./execute-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.EditUser.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.EditUser.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.EditUser.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false

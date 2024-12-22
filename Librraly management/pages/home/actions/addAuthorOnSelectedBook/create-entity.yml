@@ -1,0 +1,8 @@
+mode: structured
+valueByMode:
+  structured:
+    book_id:
+      value: '{{ui.BooksTable.selectedRow.data.book_id}}'
+    author_id:
+      value: '{{ui.bookstablePopupform.value.author_id}}'
+  custom: ''

@@ -1,0 +1,1 @@
+SELECT * FROM public.users WHERE username = ? AND password = ?;

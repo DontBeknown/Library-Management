@@ -1,0 +1,92 @@
+id: '17145856451640.2626364285946339'
+definitionId: popupForm
+parentSlotId: '17144220952460.11464953985548076'
+styles:
+  xl:
+    gridItem:
+      x: 9
+      y: 368
+      w: 3
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 602
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: ''
+  name: SubcategoryForm
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Subcategory Form
+  buttonText: New sub-category
+  closeOnSuccess: true
+actions:
+  submitEvent:
+    - action: '17145859007160.3653092319540856'
+      paramCode: ''
+      index: 0
+slots:
+  - id: '17145856451640.4248487770962899'
+    name: structure
+    children:
+      - id: '17145857471660.7322372009188591'
+        definitionId: atomicString
+        parentSlotId: '17145856451640.4248487770962899'
+        styles: {}
+        properties:
+          name: atomicString89
+          prop: subcategory_name
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []
+      - id: '17145857506970.805922076687706'
+        definitionId: atomicNumber
+        parentSlotId: '17145856451640.4248487770962899'
+        styles: {}
+        properties:
+          name: atomicNumber120
+          prop: category_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 1
+        slots: []

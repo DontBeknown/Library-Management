@@ -1,0 +1,338 @@
+id: '17145008463600.2930812930735318'
+definitionId: smartTable
+parentSlotId: '17144999243390.7184234161680878'
+styles:
+  xl:
+    gridItem:
+      x: 2
+      y: 150
+      w: 20
+      h: 101
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 80
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: '{{actions.loadBookcopies.data}}'
+  name: loadbookcopiesTable
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Book copies
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadBookcopies.loading}}'
+    value: false
+  showExportAction:
+    value: false
+    dataValue: 'true'
+    withData: false
+  showReloadAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+  __UIBAKERY__SHOW__CONDITION__CODE__: 'false'
+actions:
+  smartTableReload:
+    - action: '17144227211470.6443568134262974'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+  smartTableCreate: []
+  smartTableEdit: []
+  smartTableBulkEdit: []
+  smartTableDelete: []
+  smartTableRowSelect: []
+  smartTableRowClick: []
+  smartTablePageSelect: []
+  uiOnPageSizeChange: []
+  smartTableFilterChange: []
+  smartTableSortChange: []
+  uiOnCellChangeTrigger: []
+slots:
+  - id: '17145008463600.7173825665983744'
+    name: columns
+    children:
+      - id: '17145008842510.6503657740817108'
+        definitionId: atomicNumber
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber65
+          prop: book_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 0
+        slots: []
+      - id: '17145008842510.18943487772945322'
+        definitionId: atomicNumber
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber66
+          prop: publisher_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 1
+        slots: []
+      - id: '17145008842510.1927213259228593'
+        definitionId: atomicNumber
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber67
+          prop: subcategory_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 2
+        slots: []
+      - id: '17145008842510.25397136500972284'
+        definitionId: atomicNumber
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber68
+          prop: book_copy_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 3
+        slots: []
+      - id: '17145008842510.46984959513397784'
+        definitionId: atomicString
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicString24
+          prop: title
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          widthMode: auto
+          filter: true
+        index: 4
+        slots: []
+      - id: '17145008842510.6606887434975033'
+        definitionId: atomicNumber
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber69
+          prop: publication_year
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 6
+        slots: []
+      - id: '17145008842510.6390697563314129'
+        definitionId: atomicBoolean
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicBoolean3
+          prop: is_available
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+          controlType:
+            value: toggle
+            dataValue: toggle
+            withData: false
+        index: 7
+        slots: []
+      - id: '17145008842510.6771192922198483'
+        definitionId: atomicString
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString25
+          prop: acquisition_type
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          widthMode: auto
+          filter: true
+        index: 8
+        slots: []
+      - id: '17145008842510.7688491093557492'
+        definitionId: atomicDateTime
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicDateTime16
+          prop: acquisition_date
+          primaryKey: false
+          timeFormat:
+            value: ''
+            dataValue: HH:mm
+            withData: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          widthMode: auto
+          filter: true
+        index: 9
+        slots: []
+      - id: '17145008842510.8332310602025821'
+        definitionId: atomicString
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString28
+          prop: source
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          widthMode: auto
+          filter: true
+        index: 10
+        slots: []
+      - id: '17145008842510.01737130709727963'
+        definitionId: atomicCurrency
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicCurrency
+          prop: cost
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          widthMode: auto
+          filter: true
+        index: 11
+        slots: []
+      - id: '17145008842510.9142184533239097'
+        definitionId: atomicText
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicText
+          prop: description
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 200
+          widthMode: auto
+          filter: true
+        index: 12
+        slots: []
+      - id: '17145008842510.28603348941756934'
+        definitionId: atomicString
+        parentSlotId: '17145008463600.7173825665983744'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString151
+          prop: isbn
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          filter: true
+          widthMode: fixed
+          width: 126
+        actions: {}
+        index: 5
+        slots: []

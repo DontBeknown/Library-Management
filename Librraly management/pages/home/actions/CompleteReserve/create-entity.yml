@@ -1,0 +1,12 @@
+mode: structured
+valueByMode:
+  structured:
+    user_id:
+      value: '{{ui.CompleteReseve.value.user_id}}'
+    book_copy_id:
+      value: '{{ui.CompleteReseve.value.book_copy_id}}'
+    borrow_date:
+      value: '{{ui.CompleteReseve.value.complete_date}}'
+    staff_id:
+      value: '{{ui.CompleteReseve.value.staff_id}}'
+  custom: ''

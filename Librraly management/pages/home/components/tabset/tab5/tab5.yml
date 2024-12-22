@@ -1,0 +1,28 @@
+id: '17144999243390.9091069628493225'
+definitionId: tab
+parentSlotId: '17144220952460.935462285036265'
+styles: {}
+properties:
+  name: tab5
+  title: Accounting
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  visible:
+    value: true
+    dataValue: |-
+      if({{state.adminData}} === "3" || {{state.adminData}} === "1")
+        return true
+      else
+        return false
+    withData: true
+index: 4
+slots:
+  - id: '17144999243390.7184234161680878'
+    name: content
+    children:
+      - AccountingTable.yml
+      - loadbookcopiesTable.yml
+      - popupForm.yml
+      - newCopiesForm.yml
+      - accountingStaffSearchBar.yml

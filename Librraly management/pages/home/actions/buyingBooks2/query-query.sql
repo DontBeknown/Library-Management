@@ -1,0 +1,2 @@
+INSERT INTO public.bookcopies (book_copy_id, book_id, is_available, acquisition_type, acquisition_date, source, cost, description)
+VALUES (DEFAULT, {{ui.newCopiesForm2.value.book_id}}, TRUE, {{ui.newCopiesForm2.value.acquisition_type}}, {{ui.newCopiesForm2.value.acquisition_date}}, {{ui.newCopiesForm2.value.source}}, {{ui.newCopiesForm2.value.cost}}, {{ui.newCopiesForm2.value.description}});

@@ -1,0 +1,32 @@
+id: '17146473926840.6854951401360323'
+name: AnalysisReport
+url: analysisreport
+roleIds: []
+disableInMenu: false
+hideFromMenu: false
+parentPageId: ''
+slots:
+  - id: '17146473926840.022365142460486043'
+    name: content
+    children:
+      - id: '17146473926840.3785560080837318'
+        definitionId: grid
+        parentSlotId: '17146473926840.022365142460486043'
+        styles: {}
+        properties:
+          name: analysisreport
+          pageTitle: '{{app.name}} - {{activeRoute.name}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots:
+          - id: '17146473926840.8972010744913235'
+            name: content
+            children:
+              - components/sumborrowingTable.yml
+              - components/sumborrowingChart.yml
+              - components/sumborrowingcategoryMetric.yml
+              - components/loadpublicborrowingChart.yml
+              - components/publicBorrowingTablebyDay.yml
+              - components/publicBorrowingTableBYdayOdweek.yml

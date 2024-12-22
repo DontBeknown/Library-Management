@@ -1,0 +1,87 @@
+id: '17145948365850.764048185307985'
+kind: workflow
+name: delLocation
+nameConfigured: true
+steps:
+  - id: '17145948401160.7521486382979681'
+    type: DELETE_ENTITY
+    name: delete
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.location
+        valueType: string
+      - type: filter
+        value:
+          - column: shelf_id
+            operation: '='
+            value:
+              value: '{{ui.publicLocationTable.editedRow.data.shelf_id }}'
+        valueType: custom
+      - type: bulk
+        value: false
+        valueType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17145948749250.8353707392687177'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '17145863875970.2974334815096722'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./execute-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: true
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.delLocation.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.delLocation.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.delLocation.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

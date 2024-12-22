@@ -1,0 +1,20 @@
+mode: structured
+valueByMode:
+  structured:
+    name:
+      value: '{{ui.AddStaff.value.name}}'
+    surname:
+      value: '{{ui.AddStaff.value.surname}}'
+    role_id:
+      value: '{{ui.AddStaff.value.role}}'
+    email:
+      value: '{{ui.AddStaff.value.email}}'
+    phone:
+      value: '{{ui.AddStaff.value.phone}}'
+    hire_date:
+      value: '{{ui.AddStaff.value.hire_date}}'
+    username:
+      value: '{{ui.AddStaff.value.username}}'
+    password:
+      value: '{{ui.AddStaff.value.password}}'
+  custom: ''

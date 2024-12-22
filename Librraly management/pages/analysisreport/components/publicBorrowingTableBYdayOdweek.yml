@@ -1,0 +1,143 @@
+id: '17146507841780.41997799968383664'
+definitionId: smartTable
+parentSlotId: '17146473926840.8972010744913235'
+styles:
+  xl:
+    gridItem:
+      x: 5
+      y: 267
+      w: 14
+      h: 109
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 348
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: '{{actions.loadTopBookByCategory.data}}'
+  name: publicBorrowingTableBYdayOdweek
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Most borrowed in each category
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadTopBookByCategory.loading}}'
+    value: false
+  showExportAction:
+    value: false
+    dataValue: 'true'
+    withData: false
+  showReloadAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+actions:
+  smartTableReload:
+    - action: '17146508137630.2534232710688644'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+  smartTableCreate: []
+  smartTableEdit: []
+  smartTableBulkEdit: []
+  smartTableDelete: []
+  smartTableRowSelect: []
+  smartTableRowClick: []
+  uiOnRowDoubleClick: []
+  smartTablePageSelect: []
+  uiOnPageSizeChange: []
+  smartTableFilterChange: []
+  smartTableSortChange: []
+  uiOnCellChangeTrigger: []
+slots:
+  - id: '17146507841780.7590761927118579'
+    name: columns
+    children:
+      - id: '17146518016900.43894554437400557'
+        definitionId: atomicString
+        parentSlotId: '17146507841780.7590761927118579'
+        styles: {}
+        properties:
+          name: atomicString125
+          prop: category_name
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []
+      - id: '17146518051240.24616186037637422'
+        definitionId: atomicNumber
+        parentSlotId: '17146507841780.7590761927118579'
+        styles: {}
+        properties:
+          name: atomicNumber165
+          prop: borrow_times
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 3
+        slots: []
+      - id: '17146521525940.006570452309572872'
+        definitionId: atomicString
+        parentSlotId: '17146507841780.7590761927118579'
+        styles: {}
+        properties:
+          name: atomicString124
+          prop: most_borrowed_book_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 1
+        slots: []
+      - id: '17146521561890.33855243106462596'
+        definitionId: atomicString
+        parentSlotId: '17146507841780.7590761927118579'
+        styles: {}
+        properties:
+          name: atomicString126
+          prop: most_borrowed_book_title
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 2
+        slots: []

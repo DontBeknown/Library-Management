@@ -1,0 +1,259 @@
+id: '17145004949160.20112465043894567'
+definitionId: smartTable
+parentSlotId: '17144999243390.7184234161680878'
+styles:
+  xl:
+    gridItem:
+      x: 3
+      y: 30
+      w: 18
+      h: 101
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 0
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: '{{actions.loadAccounting.data}}'
+  name: AccountingTable
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Accounting
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadAccounting.loading}}'
+    value: false
+  showExportAction:
+    value: false
+    dataValue: 'true'
+    withData: false
+  showReloadAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+  showEditAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+  showDeleteAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+actions:
+  smartTableReload:
+    - action: '17144900631300.5738295547700685'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+  smartTableCreate: []
+  smartTableEdit:
+    - action: '17145020898920.20349690300223133'
+      paramCode: ''
+      index: 1
+  smartTableBulkEdit: []
+  smartTableDelete:
+    - action: '17145031345960.7466117903359637'
+      paramCode: ''
+      index: 2
+  smartTableRowSelect: []
+  smartTableRowClick: []
+  smartTablePageSelect: []
+  uiOnPageSizeChange: []
+  smartTableFilterChange: []
+  smartTableSortChange: []
+  uiOnCellChangeTrigger: []
+slots:
+  - id: '17145004949160.5711577773387237'
+    name: columns
+    children:
+      - id: '17145005283360.8190113521933997'
+        definitionId: atomicNumber
+        parentSlotId: '17145004949160.5711577773387237'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber62
+          prop: transaction_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 103
+          widthMode: fixed
+          filter: true
+          forceView: true
+        actions: {}
+        index: 0
+        slots: []
+      - id: '17145005283360.2938714578880466'
+        definitionId: atomicNumber
+        parentSlotId: '17145004949160.5711577773387237'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber63
+          prop: amount
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 2
+        slots: []
+      - id: '17145005283360.6302897376810699'
+        definitionId: atomicString
+        parentSlotId: '17145004949160.5711577773387237'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString26
+          prop: category
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          widthMode: auto
+          filter: true
+        index: 6
+        slots: []
+      - id: '17145005283360.053513941052525604'
+        definitionId: atomicNumber
+        parentSlotId: '17145004949160.5711577773387237'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber64
+          prop: staff_id
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 4
+        slots: []
+      - id: '17145005283360.9257239168420612'
+        definitionId: atomicDateTime
+        parentSlotId: '17145004949160.5711577773387237'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicDateTime15
+          prop: transaction_date
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          filter: true
+          widthMode: fixed
+          width: 207
+        index: 1
+        slots: []
+      - id: '17145005283360.38790199372089185'
+        definitionId: atomicSelect
+        parentSlotId: '17145004949160.5711577773387237'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicSelect4
+          prop: type
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          filter: true
+          widthMode: auto
+          width: 120
+          options:
+            value:
+              - value: '"income"'
+                color: success
+                __UIBAKERY__SYSTEM_ID__: '17145007115040.6445475329154391'
+              - value: '"expense"'
+                color: warning
+                __UIBAKERY__SYSTEM_ID__: '17145007218610.2842204553415104'
+            dataValue: '[]'
+            withData: false
+        index: 3
+        slots: []
+      - id: '17147380868620.8427953508883033'
+        definitionId: atomicString
+        parentSlotId: '17145004949160.5711577773387237'
+        styles: {}
+        properties:
+          name: atomicString96
+          prop: staff_name
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 5
+        slots: []
+      - id: '17145005283360.8347191920755219'
+        definitionId: atomicText
+        parentSlotId: '17145004949160.5711577773387237'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicText
+          prop: account_description
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          filter: true
+          widthMode: fixed
+          width: 203
+        index: 7
+        actions: {}
+        slots: []

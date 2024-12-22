@@ -1,0 +1,14 @@
+mode: structured
+valueByMode:
+  structured:
+    user_id:
+      value: '{{ui.publicborrowingtableForm.value.user_id}}'
+    book_copy_id:
+      value: '{{ui.publicborrowingtableForm.value.book_copy_id}}'
+    borrow_date:
+      value: '{{ui.publicborrowingtableForm.value.borrow_date}}'
+    return_date:
+      value: '{{ui.publicborrowingtableForm.value.return_date}}'
+    staff_id:
+      value: '{{ui.publicborrowingtableForm.value.staff_id}}'
+  custom: ''

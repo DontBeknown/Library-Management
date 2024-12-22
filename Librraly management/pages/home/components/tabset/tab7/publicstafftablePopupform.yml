@@ -1,0 +1,107 @@
+id: '17145525957130.18829167072725195'
+definitionId: popupForm
+parentSlotId: '17145440949160.4270490064248853'
+styles:
+  xl:
+    gridItem:
+      x: 18
+      y: 157
+      w: 4
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 498
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: '{{ui.publicStaffTable.clickedRow.data}}'
+  name: publicstafftablePopupform
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Add area of respond form
+  buttonText: Add area of respond
+  submitBtnTitle: Add
+  closeOnSuccess: true
+actions:
+  submitEvent:
+    - action: '17145504719880.2735025578501975'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+  popupClick: []
+  changeEvent: []
+  customButtonClick: []
+  popupOpen: []
+  popupClose: []
+slots:
+  - id: '17145525957130.7705229969227736'
+    name: structure
+    children:
+      - id: '17145526066010.4891009466044087'
+        definitionId: atomicNumber
+        parentSlotId: '17145525957130.7705229969227736'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber108
+          prop: staff_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 0
+        slots: []
+      - id: '17145526153200.037961384303821566'
+        definitionId: atomicNumber
+        parentSlotId: '17145525957130.7705229969227736'
+        styles: {}
+        properties:
+          name: atomicNumber109
+          prop: subcategory_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 1
+        slots: []

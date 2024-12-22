@@ -1,0 +1,240 @@
+id: '17145821973790.44961596237876233'
+definitionId: smartTable
+parentSlotId: '17144220952460.11464953985548076'
+styles:
+  xl:
+    gridItem:
+      x: 1
+      y: 477
+      w: 14
+      h: 80
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 495
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: '{{actions.SearchSubCategoryLocation.data}}'
+  name: publicSubcategorylocationTable
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Subcategory location
+  showLoading:
+    withData: true
+    dataValue: '{{actions.SearchSubCategoryLocation.loading}}'
+    value: false
+  showClearSelection:
+    value: true
+    dataValue: 'true'
+    withData: false
+  showExportAction:
+    value: false
+    dataValue: 'true'
+    withData: false
+  showReloadAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+  showDeleteAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+  showEditAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+  enableUserColumnResize:
+    value: true
+    dataValue: 'false'
+    withData: false
+  totalRowConfig:
+    show: false
+    position: top
+    rowColor: hint
+    textStyle: []
+    textColor: basic
+    updateWhenFiltering: true
+    themeDefaultOverridePropertyKey: smartTableTotalRowConfig
+  limit: '5'
+actions:
+  smartTableReload:
+    - action: '17145863875970.2974334815096722'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+  smartTableCreate: []
+  smartTableEdit:
+    - action: '17145942117500.7231562152156337'
+      paramCode: ''
+      index: 1
+  smartTableBulkEdit: []
+  smartTableDelete:
+    - action: '17145947682750.11870878372098548'
+      paramCode: ''
+      index: 2
+  smartTableRowSelect: []
+  smartTableRowClick: []
+  smartTablePageSelect: []
+  uiOnPageSizeChange: []
+  smartTableFilterChange: []
+  smartTableSortChange: []
+  uiOnCellChangeTrigger: []
+slots:
+  - id: '17145821973790.6269680297854603'
+    name: columns
+    children:
+      - id: '17145864078820.24394535748935287'
+        definitionId: atomicNumber
+        parentSlotId: '17145821973790.6269680297854603'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber61
+          prop: subcatergorylocate_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+          forceView: true
+        index: 1
+        slots: []
+      - id: '17145864078820.2033815234499754'
+        definitionId: atomicNumber
+        parentSlotId: '17145821973790.6269680297854603'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber121
+          prop: subcategory_id
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 2
+        slots: []
+      - id: '17145866630800.5468670179516839'
+        definitionId: atomicString
+        parentSlotId: '17145821973790.6269680297854603'
+        styles:
+          xl: {}
+        properties:
+          name: atomicString81
+          prop: subcategory_name
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          forceView: true
+          width: '80'
+          widthMode: auto
+        index: 0
+        actions: {}
+        slots: []
+      - id: '17145866674550.9023846620461016'
+        definitionId: atomicNumber
+        parentSlotId: '17145821973790.6269680297854603'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber123
+          prop: category_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 4
+        slots: []
+      - id: '17145866740300.9201328417055614'
+        definitionId: atomicNumber
+        parentSlotId: '17145821973790.6269680297854603'
+        styles:
+          xl: {}
+        properties:
+          name: atomicNumber124
+          prop: floor
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          forceView: true
+          width: '50'
+          widthMode: auto
+        index: 5
+        actions: {}
+        slots: []
+      - id: '17145866820140.006511868171499291'
+        definitionId: atomicNumber
+        parentSlotId: '17145821973790.6269680297854603'
+        styles: {}
+        properties:
+          name: atomicNumber125
+          prop: section
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          forceView: true
+          pinColumn: ''
+          alignment: left
+          widthMode: fixed
+          width: '50'
+        index: 6
+        slots: []
+      - id: '17145929841050.15562335543348227'
+        definitionId: atomicNumber
+        parentSlotId: '17145821973790.6269680297854603'
+        styles: {}
+        properties:
+          name: atomicNumber122
+          prop: shelf_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: '50'
+        index: 3
+        slots: []

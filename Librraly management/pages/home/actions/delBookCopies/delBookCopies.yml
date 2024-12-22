@@ -1,0 +1,60 @@
+id: '17145817243770.3553589139304356'
+kind: workflow
+name: delBookCopies
+nameConfigured: true
+steps:
+  - id: '17145817497930.9118227262279377'
+    type: DELETE_ENTITY
+    name: newStep
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.bookcopies
+        valueType: string
+      - type: filter
+        value:
+          - column: book_copy_id
+            operation: '='
+            value:
+              value: '{{ui.BookCopiesTable.deletedRow.data.book_copy_id}}'
+        valueType: custom
+      - type: bulk
+        value: false
+        valueType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: true
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.delBookCopies.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.delBookCopies.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.delBookCopies.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false

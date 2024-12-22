@@ -1,0 +1,66 @@
+id: '17146025143200.7474442792476139'
+kind: workflow
+name: editFine
+nameConfigured: true
+steps:
+  - id: '17146025233190.45169248366964254'
+    type: UPDATE_ENTITY
+    name: update
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.borrowingfine
+        valueType: string
+      - type: filter
+        value:
+          - column: fine_id
+            operation: '='
+            value:
+              value: '{{ui.publicBorrowingfineTable.editedRow.data.fine_id}}'
+        valueType: custom
+      - type: entity
+        value: ./update-entity.yml
+        valueType: custom
+      - type: replace
+        value: false
+        valueType: string
+      - type: bulk
+        value: false
+        valueType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.editFine.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.editFine.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.editFine.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false

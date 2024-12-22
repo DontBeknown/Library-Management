@@ -1,0 +1,8 @@
+mode: structured
+valueByMode:
+  structured:
+    publisher_name:
+      value: '{{ui.publicPublisherPopupform.value.publisher_name}}'
+    address:
+      value: '{{ui.publicPublisherPopupform.value.address}}'
+  custom: ''

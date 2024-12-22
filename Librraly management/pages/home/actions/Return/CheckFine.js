@@ -1,0 +1,1 @@
+return {{ui.publicborrowingtablePopupform.value.Fine_amount}} > 0;

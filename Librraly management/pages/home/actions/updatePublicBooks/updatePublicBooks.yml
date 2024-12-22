@@ -1,0 +1,99 @@
+id: '17144045646200.857117006835517'
+kind: workflow
+name: updatePublicBooks
+nameConfigured: true
+steps:
+  - id: '17144053069330.21801771112321333'
+    type: customSQLQuery
+    name: query
+    params:
+      - type: query
+        value: ./query-query.sql
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+        mustSelectFirst: true
+      - type: preparedQuery
+        value: ./query-preparedQuery.sql
+        valueType: interpolatedValue
+      - type: preparedQueryParams
+        value:
+          - __UI_BAKERY__FORMAT_IF_DATE__(ui.publicBooksForm.value.title)
+          - __UI_BAKERY__FORMAT_IF_DATE__(ui.publicBooksForm.value.publisher_id)
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.publicBooksForm.value.publication_year)
+          - >-
+            __UI_BAKERY__FORMAT_IF_DATE__(ui.publicBooksForm.value.subcategory_id)
+          - __UI_BAKERY__FORMAT_IF_DATE__(ui.publicBooksForm.value.isbn)
+          - __UI_BAKERY__FORMAT_IF_DATE__(ui.publicBooksForm.value.book_id)
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: stepVersion
+        value: 2
+        valueType: custom
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17152582419810.26943556157621784'
+    type: executeAction
+    name: execute
+    params:
+      - type: action
+        value: '17144190609270.8263973976121055'
+        valueType: custom
+      - type: isActionsLibraryCall
+        value: false
+        valueType: custom
+      - type: customParams
+        value: ./execute-customParams.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.updatePublicBooks.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.updatePublicBooks.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.updatePublicBooks.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

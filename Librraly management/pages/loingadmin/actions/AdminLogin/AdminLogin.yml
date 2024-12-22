@@ -1,0 +1,200 @@
+id: '17144149897690.5593527952451971'
+kind: workflow
+name: AdminLogin
+nameConfigured: true
+steps:
+  - id: '17144149897690.30522926666767325'
+    type: customSQLQuery
+    name: request
+    params:
+      - type: query
+        value: ./request-query.sql
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: custom
+        mustSelectFirst: true
+      - type: preparedQuery
+        value: ./request-preparedQuery.sql
+        valueType: interpolatedValue
+      - type: preparedQueryParams
+        value:
+          - __UI_BAKERY__FORMAT_IF_DATE__(ui.inputUser2.value)
+          - __UI_BAKERY__FORMAT_IF_DATE__(ui.inputPassword2.value)
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: stepVersion
+        value: 2
+        valueType: custom
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+  - id: '17144149897690.3293512207813205'
+    type: condition
+    name: condition
+    params:
+      - type: code
+        value: ./condition.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: steps
+        value:
+          - condition: true
+            steps:
+              - id: '17145655970590.22140986137628738'
+                type: putInStore
+                name: save
+                params:
+                  - type: name
+                    value: '17145663879360.6945602139416056'
+                    valueType: string
+                  - type: value
+                    value: '{{data[0].role_id}}'
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: producible
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+                nameConfigured: true
+              - id: '17145950552640.15512007675997141'
+                type: customSQLQuery
+                name: request2
+                params:
+                  - type: query
+                    value: ./request2-query.sql
+                    valueType: interpolatedValue
+                    interpolationType: string
+                  - type: datasourceId
+                    value: UI Bakery Postgres
+                    valueType: custom
+                    mustSelectFirst: true
+                  - type: preparedQuery
+                    value: ./request2-preparedQuery.sql
+                    valueType: interpolatedValue
+                  - type: preparedQueryParams
+                    value:
+                      - __UI_BAKERY__FORMAT_IF_DATE__(ui.inputUser2.value)
+                      - __UI_BAKERY__FORMAT_IF_DATE__(ui.inputPassword2.value)
+                    valueType: custom
+                  - type: customDatabaseName
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: stepVersion
+                    value: 2
+                    valueType: custom
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 0
+                fallthroughError: false
+                isChanged: true
+                nameConfigured: true
+              - id: '17145949887860.5580185002994553'
+                type: putInStore
+                name: save2
+                params:
+                  - type: name
+                    value: '17145950211090.6504225817109206'
+                    valueType: string
+                  - type: value
+                    value: parseInt({{data[0].staff_id}},10)
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: producible
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+              - id: '17144149897690.8363432643987454'
+                type: navigation
+                name: navigate
+                params:
+                  - type: url
+                    value: '{{routes.admin.url}}'
+                    valueType: interpolatedValue
+                    interpolationType: string
+                  - type: queryParams
+                    value:
+                      - name: ''
+                        value: ''
+                    valueType: custom
+                    interpolationType: string
+                level: 1
+                fallthroughError: false
+                isChanged: true
+                paused: false
+          - condition: false
+            steps:
+              - id: '17144149897690.12024290697211715'
+                type: showToast
+                name: notification
+                params:
+                  - type: message
+                    value: '"Login failed. Please check your username and password."'
+                    valueType: interpolatedValue
+                  - type: type
+                    value: danger
+                    valueType: string
+                  - type: icon
+                    value: checkmark-circle-2
+                    valueType: string
+                  - type: duration
+                    value: '3000'
+                    valueType: interpolatedValue
+                  - type: position
+                    value: top-end
+                    valueType: string
+                  - type: hideOnClick
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+        valueType: custom
+    level: 0
+    fallthroughError: true
+    isChanged: true
+    nameConfigured: true
+mode: manual
+modeConfigured: true
+parentPageId: '17144149200270.5227669067889407'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.AdminLogin.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.AdminLogin.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.AdminLogin.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+parentId: null
+configured: true

@@ -1,0 +1,14 @@
+mode: structured
+valueByMode:
+  structured:
+    user_id:
+      value: '{{ui.ReserveForm.value.user_id}}'
+    book_copy_id:
+      value: '{{ui.ReserveForm.value.book_copy_id}}'
+    reserve_date:
+      value: '{{ui.ReserveForm.value.reserve_date}}'
+    staff_id:
+      value: '{{ui.ReserveForm.value.staff_id}}'
+    status:
+      value: Pending
+  custom: ''

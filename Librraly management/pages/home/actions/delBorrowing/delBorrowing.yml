@@ -1,0 +1,59 @@
+id: '17146008728830.7545395044330121'
+kind: workflow
+name: delBorrowing
+nameConfigured: true
+steps:
+  - id: '17146008771890.37963573365787906'
+    type: DELETE_ENTITY
+    name: delete
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.borrowing
+        valueType: string
+      - type: filter
+        value:
+          - column: borrow_id
+            operation: '='
+            value:
+              value: '{{ui.publicBorrowingTablebyDay.deletedRow.data.borrow_id}}'
+        valueType: custom
+      - type: bulk
+        value: false
+        valueType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: true
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.delBorrowing.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.delBorrowing.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.delBorrowing.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

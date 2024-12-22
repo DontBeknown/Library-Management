@@ -1,0 +1,6 @@
+mode: structured
+valueByMode:
+  structured:
+    category_name:
+      value: '{{ui.CategorypopupForm.value.Category_name}}'
+  custom: ''

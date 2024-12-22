@@ -1,0 +1,11 @@
+id: '17150980556990.9954480892651236'
+nameConfigured: true
+name: DeadlineDay
+kind: store_item
+parentId: '17166419564000.2775234867949927'
+storeItem:
+  value: ''
+  valueType: number
+  initialValue: '5'
+  version: 1
+steps: []

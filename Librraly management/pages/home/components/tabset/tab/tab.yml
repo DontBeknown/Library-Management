@@ -1,0 +1,54 @@
+id: '17144220952460.6015691952297937'
+definitionId: tab
+styles: {}
+properties:
+  name: tab
+  title: Books
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  icon:
+    value: ''
+    dataValue: ''
+    withData: true
+  visible:
+    value: true
+    dataValue: |-
+      if({{state.adminData}} === "2" || {{state.adminData}} === "1")
+        return true
+      else
+        return false
+    withData: true
+parentSlotId: '17144220952460.935462285036265'
+index: 0
+slots:
+  - id: '17144220952460.11464953985548076'
+    name: content
+    children:
+      - BooksTable.yml
+      - publicBooksForm.yml
+      - NewBookPopup.yml
+      - SearchBar2.yml
+      - BookCopiesTable.yml
+      - searchBookCopiesInput.yml
+      - SubcategoryTable.yml
+      - publicCategoryTable.yml
+      - publicSubcategorylocationTable.yml
+      - SubcategorySearchBar.yml
+      - SearchBarCategory.yml
+      - newCopiesForm2.yml
+      - SubcategoryForm.yml
+      - CategorypopupForm.yml
+      - publicLocationTable.yml
+      - sublocationForm.yml
+      - SubcategoryLocationForm.yml
+      - locationForm.yml
+      - publicAuthorTable.yml
+      - publicAuthorTable2.yml
+      - authorSearchBar.yml
+      - addAuthorForm.yml
+      - bookstablePopupform.yml
+      - bookAuthorsSearchBar.yml
+      - publicPublisherTable.yml
+      - publisherSearchBar.yml
+      - publicPublisherPopupform.yml

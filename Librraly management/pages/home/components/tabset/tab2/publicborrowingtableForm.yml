@@ -1,0 +1,167 @@
+id: '17144222884960.28072608574653946'
+definitionId: form
+parentSlotId: '17144220952460.6381969726610273'
+styles:
+  xl:
+    gridItem:
+      x: 16
+      y: 38
+      w: 6
+      h: 96
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 80
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: ''
+  name: publicborrowingtableForm
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Borrow
+  showSuccessMessage: false
+  showCustomButton:
+    value: false
+    dataValue: 'false'
+    withData: false
+  customButtonText: Edit
+  submitBtnTitle: Add
+  resetOnSubmit: true
+  showSubmitBtn:
+    value: true
+    dataValue: 'true'
+    withData: false
+actions:
+  submitEvent:
+    - action: '17144251783440.6746235436313459'
+      paramCode: ''
+      index: 0
+slots:
+  - id: '17144222884960.932094806496311'
+    name: structure
+    children:
+      - id: '17144369076130.807121889683799'
+        definitionId: atomicNumber
+        parentSlotId: '17144222884960.932094806496311'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber13
+          prop: user_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 0
+        slots: []
+      - id: '17144369076130.5110939167654549'
+        definitionId: atomicNumber
+        parentSlotId: '17144222884960.932094806496311'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber30
+          prop: book_copy_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+          editModeValue: >-
+            parseInt({{ui.publicBookcopiesTable.clickedRow.data.book_copy_id}},10)
+        index: 1
+        slots: []
+      - id: '17144369076130.04951050919062361'
+        definitionId: atomicNumber
+        parentSlotId: '17144222884960.932094806496311'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber34
+          prop: staff_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+          editModeValue: '{{state.staff_id}}'
+        index: 3
+        slots: []
+      - id: '17144369076130.5866216923979584'
+        definitionId: atomicDateTime
+        parentSlotId: '17144222884960.932094806496311'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicDateTime3
+          prop: return_date
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          primaryKey: false
+          filter: true
+          widthMode: auto
+          width: 120
+        index: 4
+        slots: []
+      - id: '17152571900080.8450874592825617'
+        definitionId: atomicDateTime
+        parentSlotId: '17144222884960.932094806496311'
+        styles: {}
+        properties:
+          name: atomicDateTime2
+          prop: borrow_date
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          mappedValue: moment()
+          editModeValue: moment()
+        index: 2
+        slots: []

@@ -1,0 +1,74 @@
+id: '17145430479230.9397917216255351'
+kind: workflow
+name: LoadreserveHistory
+nameConfigured: true
+steps:
+  - id: '17145433620540.1933582986779503'
+    type: LOAD_COLLECTION
+    name: load
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.reserve
+        valueType: string
+      - type: filters
+        value:
+          - column: user_id
+            operation: '='
+            value:
+              value: '{{ui.publicUsersTable.clickedRow.data.user_id}}'
+        valueType: custom
+      - type: ordering
+        value:
+          limit:
+            value: 1000
+          offset:
+            value: ''
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+      - type: additionalParams
+        value:
+          - name: ''
+            value: ''
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.LoadreserveHistory.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.LoadreserveHistory.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: false
+  errorToast: Action "{{actions.LoadreserveHistory.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

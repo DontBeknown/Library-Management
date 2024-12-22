@@ -1,0 +1,75 @@
+id: '17145513980490.41843314238711815'
+kind: workflow
+name: loadPublicSubcategory
+nameConfigured: true
+steps:
+  - id: '17145516458810.49304307777454426'
+    type: LOAD_COLLECTION
+    name: load
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: custom
+        mustSelectFirst: true
+      - type: resourceId
+        value: public.subcategory
+        valueType: custom
+        mustSelectFirst: true
+      - type: filters
+        value: []
+        valueType: custom
+        interpolationType: string
+      - type: ordering
+        value:
+          limit:
+            value: 1000
+          offset:
+            value: ''
+          orderBy:
+            value: ''
+          orderDirection:
+            value: asc
+        valueType: custom
+        interpolationType: string
+      - type: additionalParams
+        value: []
+        valueType: custom
+        interpolationType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: false
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.loadPublicSubcategory.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.loadPublicSubcategory.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: false
+  errorToast: Action "{{actions.loadPublicSubcategory.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

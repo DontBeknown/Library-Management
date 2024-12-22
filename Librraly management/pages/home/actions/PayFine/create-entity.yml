@@ -1,0 +1,16 @@
+mode: structured
+valueByMode:
+  structured:
+    transaction_date:
+      value: '{{ui.PayForm.value.fine_date}}'
+    amount:
+      value: '{{ui.PayForm.value.amount}}'
+    type:
+      value: '"income"'
+    category:
+      value: fine
+    description:
+      value: '{{ui.PayForm.value.fine_description}} book fine'
+    staff_id:
+      value: '{{ui.PayForm.value.staff_id}}'
+  custom: ''

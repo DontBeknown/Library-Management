@@ -1,0 +1,14 @@
+mode: structured
+valueByMode:
+  structured:
+    user_id:
+      value: '{{ui.publicReserveTable.editedRow.data.user_id}}'
+    book_copy_id:
+      value: '{{ui.publicReserveTable.editedRow.data.book_copy_id}}'
+    reserve_date:
+      value: '{{ui.publicReserveTable.editedRow.data.reserve_date}}'
+    status:
+      value: '{{ui.publicReserveTable.editedRow.data.status}}'
+    staff_id:
+      value: '{{ui.publicReserveTable.editedRow.data.staff_id}}'
+  custom: ''

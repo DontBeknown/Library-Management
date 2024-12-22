@@ -1,0 +1,1 @@
+return {{ui.newCopiesForm.value.cost}} > 0;

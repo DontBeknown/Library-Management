@@ -1,0 +1,27 @@
+id: '17144098938750.6085178034397956'
+name: user
+url: user
+roleIds: []
+disableInMenu: false
+hideFromMenu: false
+parentPageId: ''
+slots:
+  - id: '17144098938750.4635031962740215'
+    name: content
+    children:
+      - id: '17144098938750.18179562309063657'
+        definitionId: grid
+        parentSlotId: '17144098938750.4635031962740215'
+        styles: {}
+        properties:
+          name: user
+          pageTitle: '{{app.name}} - {{activeRoute.name}}'
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots:
+          - id: '17144098938750.5643955858128455'
+            name: content
+            children:
+              - components/tabset2/tabset2.yml

@@ -1,0 +1,52 @@
+id: '17146017091360.3848745757443879'
+definitionId: stringEdit
+parentSlotId: '17144376517610.805894175873203'
+styles:
+  xl:
+    gridItem:
+      x: 2
+      y: 156
+      w: 8
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 372
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: ReserveNameSearchBar
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  labelConfig:
+    text: Reserver Name Search
+    position: horizontal
+    align: left
+  labelWidth: 37
+actions:
+  valueChange:
+    - action: '17144397882590.4949792222510636'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  enter: []
+  focusEvent: []
+  blurEvent: []
+  init: []
+slots: []

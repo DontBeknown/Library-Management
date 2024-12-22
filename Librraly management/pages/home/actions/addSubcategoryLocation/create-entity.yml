@@ -1,0 +1,8 @@
+mode: structured
+valueByMode:
+  structured:
+    subcategory_id:
+      value: '{{ui.SubcategoryLocationForm.value.subcategory_id}}'
+    shelf_id:
+      value: '{{ui.SubcategoryLocationForm.value.shelf_id}}'
+  custom: ''

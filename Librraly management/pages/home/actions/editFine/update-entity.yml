@@ -1,0 +1,14 @@
+mode: structured
+valueByMode:
+  structured:
+    borrow_id:
+      value: '{{ui.publicBorrowingfineTable.editedRow.data.borrow_id}}'
+    fine_date:
+      value: '{{ui.publicBorrowingfineTable.editedRow.data.fine_date}}'
+    amount:
+      value: '{{ui.publicBorrowingfineTable.editedRow.data.amount}}'
+    status:
+      value: '{{ui.publicBorrowingfineTable.editedRow.data.status}}'
+    description:
+      value: '{{ui.publicBorrowingfineTable.editedRow.data.fine_description}}'
+  custom: ''

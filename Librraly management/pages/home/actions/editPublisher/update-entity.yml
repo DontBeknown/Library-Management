@@ -1,0 +1,10 @@
+mode: structured
+valueByMode:
+  structured:
+    publisher_name:
+      value: '{{ui.publicPublisherTable.editedRow.data.publisher_name}}'
+    address:
+      value: '{{ui.publicPublisherTable.editedRow.data.address}}'
+    publisher_id:
+      value: ''
+  custom: ''

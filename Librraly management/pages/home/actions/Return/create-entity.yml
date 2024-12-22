@@ -1,0 +1,14 @@
+mode: structured
+valueByMode:
+  structured:
+    borrow_id:
+      value: '{{ui.publicborrowingtablePopupform.value.borrow_id}}'
+    amount:
+      value: '{{ui.publicborrowingtablePopupform.value.Fine_amount}}'
+    status:
+      value: '"Unpaid"'
+    description:
+      value: '{{ui.publicborrowingtablePopupform.value.Fine_description}}'
+    fine_date:
+      value: '{{ui.publicborrowingtablePopupform.value.Return_Date}}'
+  custom: ''

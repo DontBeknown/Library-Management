@@ -1,0 +1,53 @@
+id: '17145504719880.2735025578501975'
+kind: workflow
+name: addAreaOfRespond
+nameConfigured: true
+steps:
+  - id: '17145504919670.9347178745172873'
+    type: CREATE_ENTITY
+    name: newStep
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.areaofrespond
+        valueType: string
+      - type: entity
+        value: ./newStep-entity.yml
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.addAreaOfRespond.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.addAreaOfRespond.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.addAreaOfRespond.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false

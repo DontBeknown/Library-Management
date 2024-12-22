@@ -1,0 +1,19 @@
+id: '17146053253000.11305099083585168'
+definitionId: tab
+parentSlotId: '17144220952460.935462285036265'
+styles: {}
+properties:
+  name: tab8
+  title: About you
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+index: 7
+slots:
+  - id: '17146053253000.4368319030907557'
+    name: content
+    children:
+      - loadpublicstaffDetail.yml
+      - loadonlystaffborrowTable.yml
+      - loadonlystaffborrowTable2.yml
+      - OnlyStaffAccountingTable.yml

@@ -1,0 +1,133 @@
+id: '17146677411280.1776914186184042'
+kind: workflow
+name: userReserve
+nameConfigured: true
+steps:
+  - id: '17146677545970.3220066316095682'
+    type: customSQLQuery
+    name: query
+    params:
+      - type: query
+        value: ./query-query.sql
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: custom
+        mustSelectFirst: true
+      - type: preparedQuery
+        value: ./query-preparedQuery.sql
+        valueType: interpolatedValue
+      - type: preparedQueryParams
+        value:
+          - __UI_BAKERY__FORMAT_IF_DATE__(ui.userReserveForm.value.book_copy_id)
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: stepVersion
+        value: 2
+        valueType: custom
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17146677934650.6949146280621386'
+    type: condition
+    name: condition
+    params:
+      - type: code
+        value: ./condition.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: steps
+        value:
+          - condition: true
+            steps:
+              - id: '17146678081980.4263540005580915'
+                type: showToast
+                name: notification
+                params:
+                  - type: message
+                    value: This book is currently avaliable
+                    valueType: interpolatedValue
+                  - type: type
+                    value: danger
+                    valueType: string
+                  - type: icon
+                    value: checkmark-circle-2
+                    valueType: string
+                  - type: duration
+                    value: '3000'
+                    valueType: interpolatedValue
+                  - type: position
+                    value: top-end
+                    valueType: string
+                  - type: hideOnClick
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+          - condition: false
+            steps:
+              - id: '17146678674700.28232143244359875'
+                type: CREATE_ENTITY
+                name: newStep
+                params:
+                  - type: datasourceId
+                    value: UI Bakery Postgres
+                    valueType: string
+                  - type: resourceId
+                    value: public.reserve
+                    valueType: string
+                  - type: entity
+                    value: ./newStep-entity.yml
+                    valueType: custom
+                  - type: customDatabaseName
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+                nameConfigured: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '17144098938750.6085178034397956'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.userReserve.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.userReserve.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.userReserve.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false

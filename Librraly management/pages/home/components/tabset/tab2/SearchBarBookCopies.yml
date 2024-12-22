@@ -1,0 +1,52 @@
+id: '17145954082260.0877187131716819'
+definitionId: stringEdit
+parentSlotId: '17144220952460.6381969726610273'
+styles:
+  xl:
+    gridItem:
+      x: 1
+      y: 29
+      w: 6
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 249
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: SearchBarBookCopies
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  labelConfig:
+    text: Search
+    position: horizontal
+    align: left
+  labelWidth: 18
+actions:
+  valueChange:
+    - action: '17144227211470.6443568134262974'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  enter: []
+  focusEvent: []
+  blurEvent: []
+  init: []
+slots: []

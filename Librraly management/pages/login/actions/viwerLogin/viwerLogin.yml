@@ -1,0 +1,59 @@
+id: '17146772307360.18484943632095097'
+kind: workflow
+name: viwerLogin
+nameConfigured: true
+steps:
+  - id: '17146772593190.9098154265507683'
+    type: putInStore
+    name: save
+    params:
+      - type: name
+        value: '17146772792200.572796994121652'
+        valueType: string
+      - type: value
+        value: 'true'
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: producible
+        value: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+  - id: '17146773252890.7233697139296795'
+    type: navigation
+    name: navigate
+    params:
+      - type: url
+        value: '{{routes.user.url}}'
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: queryParams
+        value:
+          - name: ''
+            value: ''
+        valueType: custom
+        interpolationType: string
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '17144119130540.1326958335748667'
+parentId: null
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.viwerLogin.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.viwerLogin.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.viwerLogin.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false

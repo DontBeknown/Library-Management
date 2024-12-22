@@ -1,0 +1,284 @@
+id: '17146074327920.4865931209190957'
+definitionId: smartTable
+parentSlotId: '17146053253000.4368319030907557'
+styles:
+  xl:
+    gridItem:
+      x: 1
+      y: 16
+      w: 16
+      h: 80
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 80
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: '{{actions.LoadOnlyStaffBorrow.data}}'
+  name: loadonlystaffborrowTable
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: 'Your borrow '
+  showLoading:
+    withData: true
+    dataValue: '{{actions.LoadOnlyStaffBorrow.loading}}'
+    value: false
+  showExportAction:
+    value: false
+    dataValue: 'true'
+    withData: false
+  showReloadAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+actions:
+  smartTableReload:
+    - action: '17146075331370.7630355741094876'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+  smartTableCreate: []
+  smartTableEdit: []
+  smartTableBulkEdit: []
+  smartTableDelete: []
+  smartTableRowSelect: []
+  smartTableRowClick: []
+  smartTablePageSelect: []
+  uiOnPageSizeChange: []
+  smartTableFilterChange: []
+  smartTableSortChange: []
+  uiOnCellChangeTrigger: []
+slots:
+  - id: '17146074327920.6896789603525564'
+    name: columns
+    children:
+      - id: '17146076027210.21204640386951557'
+        definitionId: atomicNumber
+        parentSlotId: '17146074327920.6896789603525564'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber112
+          prop: borrow_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 0
+        slots: []
+      - id: '17146076027210.5187233101625781'
+        definitionId: atomicNumber
+        parentSlotId: '17146074327920.6896789603525564'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber142
+          prop: user_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 1
+        slots: []
+      - id: '17146076027210.8395691385630426'
+        definitionId: atomicNumber
+        parentSlotId: '17146074327920.6896789603525564'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicNumber143
+          prop: book_copy_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 2
+        slots: []
+      - id: '17146076027210.24025392196576423'
+        definitionId: atomicNumber
+        parentSlotId: '17146074327920.6896789603525564'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber144
+          prop: staff_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 5
+        slots: []
+      - id: '17146076027210.8037866956790118'
+        definitionId: atomicNumber
+        parentSlotId: '17146074327920.6896789603525564'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber145
+          prop: book_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 6
+        slots: []
+      - id: '17146076027220.7839877395290131'
+        definitionId: atomicNumber
+        parentSlotId: '17146074327920.6896789603525564'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber146
+          prop: publisher_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 7
+        slots: []
+      - id: '17146076027220.16355114885993616'
+        definitionId: atomicNumber
+        parentSlotId: '17146074327920.6896789603525564'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicNumber147
+          prop: subcategory_id
+          primaryKey: true
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 60
+          widthMode: auto
+          filter: true
+        index: 8
+        slots: []
+      - id: '17146076027220.03857569818962703'
+        definitionId: atomicString
+        parentSlotId: '17146074327920.6896789603525564'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString107
+          prop: title
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          widthMode: auto
+          filter: true
+        index: 4
+        slots: []
+      - id: '17146076027220.13460548670026884'
+        definitionId: atomicString
+        parentSlotId: '17146074327920.6896789603525564'
+        styles:
+          xl:
+            visible: true
+        properties:
+          name: atomicString108
+          prop: name
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 120
+          widthMode: auto
+          filter: true
+        index: 3
+        slots: []
+      - id: '17152547699980.955661316549723'
+        definitionId: atomicDateTime
+        parentSlotId: '17146074327920.6896789603525564'
+        styles:
+          xl: {}
+        properties:
+          name: atomicDateTime7
+          prop: borrow_date
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          width: 137
+          widthMode: fixed
+        actions: {}
+        index: 9
+        slots: []
+      - id: '17152547708960.34324587221497493'
+        definitionId: atomicDateTime
+        parentSlotId: '17146074327920.6896789603525564'
+        styles: {}
+        properties:
+          name: atomicDateTime8
+          prop: return_date
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 10
+        slots: []

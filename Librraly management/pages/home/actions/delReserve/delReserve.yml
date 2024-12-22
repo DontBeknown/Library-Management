@@ -1,0 +1,60 @@
+id: '17146020415580.9099812834215595'
+kind: workflow
+name: delReserve
+nameConfigured: true
+steps:
+  - id: '17146020506920.39555474903365995'
+    type: DELETE_ENTITY
+    name: delete
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.reserve
+        valueType: string
+      - type: filter
+        value:
+          - column: reserve_id
+            operation: '='
+            value:
+              value: '{{ui.publicReserveTable.deletedRow.data.reserve_id}}'
+        valueType: custom
+      - type: bulk
+        value: false
+        valueType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: false
+parentPageId: '1'
+parentId: null
+config:
+  shouldConfirm: true
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.delReserve.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.delReserve.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.delReserve.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false

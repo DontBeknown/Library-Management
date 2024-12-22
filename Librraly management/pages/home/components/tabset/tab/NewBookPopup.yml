@@ -1,0 +1,151 @@
+id: '17144162448140.06953590584444402'
+definitionId: popupForm
+parentSlotId: '17144220952460.11464953985548076'
+styles:
+  xl:
+    gridItem:
+      x: 11
+      y: 19
+      w: 4
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      id: '17144162448140.06953590584444402'
+      x: 15
+      y: 123
+      w: 4
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: ''
+  name: NewBookPopup
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Add new Book
+  buttonText: Add new Book
+  __UIBAKERY__SHOW__CONDITION__CODE__: ''
+actions:
+  submitEvent:
+    - action: '17144029496660.9412279008920907'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+  popupClick: []
+  changeEvent: []
+  customButtonClick: []
+  popupOpen: []
+  popupClose: []
+slots:
+  - id: '17144162448140.14407612351520127'
+    name: structure
+    children:
+      - id: '17144162448420.06396583553611146'
+        definitionId: atomicTime
+        parentSlotId: '17144162448140.14407612351520127'
+        styles:
+          xl:
+            visible: false
+        properties:
+          name: atomicTime
+          prop: id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []
+      - id: '17144164038110.45033100645456114'
+        definitionId: atomicString
+        parentSlotId: '17144162448140.14407612351520127'
+        styles: {}
+        properties:
+          name: atomicString19
+          prop: Title
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 1
+        slots: []
+      - id: '17144164649330.9713230833542916'
+        definitionId: atomicString
+        parentSlotId: '17144162448140.14407612351520127'
+        styles: {}
+        properties:
+          name: atomicString23
+          prop: ISBN
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 5
+        slots: []
+      - id: '17144164131540.771665107878617'
+        definitionId: atomicNumber
+        parentSlotId: '17144162448140.14407612351520127'
+        styles: {}
+        properties:
+          name: atomicNumber22
+          prop: Subcategory_ID
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 4
+        slots: []
+      - id: '17144164125190.6063619500412745'
+        definitionId: atomicNumber
+        parentSlotId: '17144162448140.14407612351520127'
+        styles: {}
+        properties:
+          name: atomicNumber26
+          prop: Publish_Year
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 3
+        slots: []
+      - id: '17144164108350.3434508989351799'
+        definitionId: atomicNumber
+        parentSlotId: '17144162448140.14407612351520127'
+        styles: {}
+        properties:
+          name: atomicNumber27
+          prop: Publisher_ID
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 2
+        slots: []

@@ -1,0 +1,6 @@
+mode: structured
+valueByMode:
+  structured:
+    status:
+      value: Cancelled
+  custom: ''

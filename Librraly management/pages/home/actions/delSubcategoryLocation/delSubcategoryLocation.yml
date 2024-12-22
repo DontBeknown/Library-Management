@@ -1,0 +1,62 @@
+id: '17145947682750.11870878372098548'
+kind: workflow
+name: delSubcategoryLocation
+nameConfigured: true
+steps:
+  - id: '17145947736160.5966027150020541'
+    type: DELETE_ENTITY
+    name: delete
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.subcategorylocation
+        valueType: string
+      - type: filter
+        value:
+          - column: subcatergorylocate_id
+            operation: '='
+            value:
+              value: >-
+                {{ui.publicSubcategorylocationTable.editedRow.data.subcatergorylocate_id}}
+        valueType: custom
+      - type: bulk
+        value: false
+        valueType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: true
+  confirmMessage: >-
+    Are you sure you'd like to proceed with
+    "{{actions.delSubcategoryLocation.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.delSubcategoryLocation.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.delSubcategoryLocation.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

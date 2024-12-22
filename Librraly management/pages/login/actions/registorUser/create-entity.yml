@@ -1,0 +1,18 @@
+mode: structured
+valueByMode:
+  structured:
+    name:
+      value: '{{ui.registorForm.value.Name}}'
+    username:
+      value: '{{ui.registorForm.value.username}}'
+    password:
+      value: '{{ui.registorForm.value.password}}'
+    registration_date:
+      value: '{{ui.registorForm.value.registration_date}}'
+    email:
+      value: '{{ui.registorForm.value.email}}'
+    phone:
+      value: '{{ui.registorForm.value.phone}}'
+    surname:
+      value: '{{ui.registorForm.value.surname}}'
+  custom: ''

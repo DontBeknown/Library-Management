@@ -1,0 +1,119 @@
+id: '17146503300380.12618327133708473'
+definitionId: smartTable
+parentSlotId: '17146473926840.8972010744913235'
+styles:
+  xl:
+    gridItem:
+      x: 16
+      y: 156
+      w: 7
+      h: 95
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 268
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: '{{actions.loadPublicBorrowingByDay.data}}'
+  name: publicBorrowingTablebyDay
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Borrowing times by day in week
+  showLoading:
+    withData: true
+    dataValue: '{{actions.loadPublicBorrowingByDay.loading}}'
+    value: false
+  showExportAction:
+    value: false
+    dataValue: 'true'
+    withData: false
+  showReloadAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+actions:
+  smartTableReload:
+    - action: '17146503373630.09037713227486321'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+  smartTableCreate: []
+  smartTableEdit: []
+  smartTableBulkEdit: []
+  smartTableDelete: []
+  smartTableRowSelect: []
+  smartTableRowClick: []
+  uiOnRowDoubleClick: []
+  smartTablePageSelect: []
+  uiOnPageSizeChange: []
+  smartTableFilterChange: []
+  smartTableSortChange: []
+  uiOnCellChangeTrigger: []
+slots:
+  - id: '17146503300380.5517783272370087'
+    name: columns
+    children:
+      - id: '17146505310860.4565912844931439'
+        definitionId: atomicNumber
+        parentSlotId: '17146503300380.5517783272370087'
+        styles: {}
+        properties:
+          name: atomicNumber166
+          prop: total_borrowings
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 1
+        slots: []
+      - id: '17146505743530.20344995761943663'
+        definitionId: atomicString
+        parentSlotId: '17146503300380.5517783272370087'
+        styles: {}
+        properties:
+          name: atomicString123
+          prop: day_name
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []

@@ -1,0 +1,18 @@
+mode: structured
+valueByMode:
+  structured:
+    name:
+      value: '{{ui.userEditForm.value.name}}'
+    username:
+      value: '{{ui.userEditForm.value.username}}'
+    password:
+      value: '{{ui.userEditForm.value.password}}'
+    registration_date:
+      value: '{{ui.userEditForm.value.registration_date}}'
+    email:
+      value: '{{ui.userEditForm.value.email}}'
+    phone:
+      value: '{{ui.userEditForm.value.phone}}'
+    surname:
+      value: '{{ui.userEditForm.value.surname}}'
+  custom: ''

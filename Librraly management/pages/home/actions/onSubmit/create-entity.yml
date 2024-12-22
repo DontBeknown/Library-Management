@@ -1,0 +1,18 @@
+mode: structured
+valueByMode:
+  structured:
+    name:
+      value: '{{ui.publicUsersPopupform.value.name}}'
+    username:
+      value: '{{ui.publicUsersPopupform.value.username}}'
+    password:
+      value: '{{ui.publicUsersPopupform.value.password}}'
+    registration_date:
+      value: '{{ui.publicUsersPopupform.value.registration_date}}'
+    email:
+      value: '{{ui.publicUsersPopupform.value.email}}'
+    phone:
+      value: '{{ui.publicUsersPopupform.value.phone}}'
+    surname:
+      value: '{{ui.publicUsersPopupform.value.surname}}'
+  custom: ''

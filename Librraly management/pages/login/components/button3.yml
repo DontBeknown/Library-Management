@@ -1,0 +1,45 @@
+id: '17144153409220.8792332701736894'
+definitionId: button
+parentSlotId: '17144119130550.9297906519327324'
+styles:
+  xl:
+    gridItem:
+      x: 13
+      y: 109
+      w: 2
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 116
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: button3
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  text: Login
+actions:
+  buttonClick:
+    - action: '17144120880690.5114940295920629'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+slots: []

@@ -1,0 +1,30 @@
+id: '17145021128740.18660540173817353'
+definitionId: tab
+parentSlotId: '17144220952460.935462285036265'
+styles: {}
+properties:
+  name: tab6
+  title: Users Management
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  visible:
+    value: true
+    dataValue: |-
+      if({{state.adminData}} === "2" || {{state.adminData}} === "1")
+        return true
+      else
+        return false
+    withData: true
+index: 5
+slots:
+  - id: '17145021128740.48956810513903304'
+    name: content
+    children:
+      - publicUsersTable.yml
+      - publicUsersTable2.yml
+      - table.yml
+      - publicUsersPopupform.yml
+      - userEditForm.yml
+      - userNameSearchBar.yml
+      - userNameSearchBar3.yml

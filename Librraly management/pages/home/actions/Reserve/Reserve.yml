@@ -1,0 +1,162 @@
+id: '17144392434870.6232253297969566'
+kind: workflow
+name: Reserve
+nameConfigured: true
+steps:
+  - id: '17144405186200.8553129024631474'
+    type: customSQLQuery
+    name: query
+    params:
+      - type: query
+        value: ./query-query.sql
+        valueType: interpolatedValue
+        interpolationType: string
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: custom
+        mustSelectFirst: true
+      - type: preparedQuery
+        value: ./query-preparedQuery.sql
+        valueType: interpolatedValue
+      - type: preparedQueryParams
+        value:
+          - __UI_BAKERY__FORMAT_IF_DATE__(ui.ReserveForm.value.book_copy_id)
+        valueType: custom
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: stepVersion
+        value: 2
+        valueType: custom
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+    nameConfigured: true
+  - id: '17144406878710.550046178472998'
+    type: condition
+    name: condition
+    params:
+      - type: code
+        value: ./condition.js
+        valueType: interpolatedValue
+        interpolationType: code
+      - type: steps
+        value:
+          - condition: true
+            steps:
+              - id: '17144399310060.6881909594363571'
+                type: CREATE_ENTITY
+                name: create
+                params:
+                  - type: datasourceId
+                    value: UI Bakery Postgres
+                    valueType: string
+                  - type: resourceId
+                    value: public.reserve
+                    valueType: string
+                  - type: entity
+                    value: ./create-entity.yml
+                    valueType: custom
+                  - type: customDatabaseName
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+                paused: false
+              - id: '17144411643460.8732694650157256'
+                type: executeAction
+                name: execute
+                params:
+                  - type: action
+                    value: '17144397882590.4949792222510636'
+                    valueType: custom
+                  - type: isActionsLibraryCall
+                    value: false
+                    valueType: custom
+                  - type: customParams
+                    value: ./execute-customParams.js
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: successMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: failureMapper
+                    value: ''
+                    valueType: interpolatedValue
+                    interpolationType: code
+                  - type: mapperEnabled
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+          - condition: false
+            steps:
+              - id: '17144434372240.7342858107173869'
+                type: showToast
+                name: notification
+                params:
+                  - type: message
+                    value: The book is available
+                    valueType: interpolatedValue
+                  - type: type
+                    value: success
+                    valueType: string
+                  - type: icon
+                    value: checkmark-circle-2
+                    valueType: string
+                  - type: duration
+                    value: '3000'
+                    valueType: interpolatedValue
+                  - type: position
+                    value: top-end
+                    valueType: string
+                  - type: hideOnClick
+                    value: false
+                    valueType: custom
+                level: 1
+                fallthroughError: false
+                isChanged: true
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.Reserve.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.Reserve.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.Reserve.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: true

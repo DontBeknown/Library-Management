@@ -1,0 +1,81 @@
+id: '17146495011360.4671898477721905'
+definitionId: metric
+parentSlotId: '17146473926840.8972010744913235'
+styles:
+  xl:
+    gridItem:
+      x: 1
+      y: 29
+      w: 4
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 160
+      w: 24
+      h: 28
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 112
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  data: '{{actions.MostBorrowBooks.data}}'
+  name: sumborrowingcategoryMetric
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Most borrow book
+  operation: sum
+  groupType: not_group
+  showLoading:
+    withData: true
+    dataValue: '{{actions.sumBorrowingCategory.loading}}'
+    value: false
+  additionalOperation: sum
+actions: {}
+slots:
+  - id: '17146495011360.47690932134728237'
+    name: metricField
+    children:
+      - id: '17152620197870.9391435294601929'
+        definitionId: atomicString
+        parentSlotId: '17146495011360.47690932134728237'
+        styles: {}
+        properties:
+          name: atomicString
+          prop: title
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []
+  - id: '17146495011360.44848185742881985'
+    name: additionalField
+    children:
+      - id: '17152620197870.5472924726778112'
+        definitionId: atomicNumber
+        parentSlotId: '17146495011360.44848185742881985'
+        styles: {}
+        properties:
+          name: atomicNumber
+          prop: total_borrows
+          primaryKey: false
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []
+  - id: '17146495011690.9725391746881407'
+    name: groupByField
+    children: []

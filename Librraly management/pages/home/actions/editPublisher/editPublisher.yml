@@ -1,0 +1,65 @@
+id: '17146412173030.7936690263302999'
+kind: workflow
+name: editPublisher
+nameConfigured: true
+steps:
+  - id: '17146412330930.790764969499586'
+    type: UPDATE_ENTITY
+    name: update
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.publisher
+        valueType: string
+      - type: filter
+        value:
+          - column: publisher_id
+            operation: '='
+            value:
+              value: '{{ui.publicPublisherTable.editedRow.data.publisher_id}}'
+        valueType: custom
+      - type: entity
+        value: ./update-entity.yml
+        valueType: custom
+      - type: replace
+        value: false
+        valueType: string
+      - type: bulk
+        value: false
+        valueType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.editPublisher.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.editPublisher.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.editPublisher.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false
+selected: true
+configured: false

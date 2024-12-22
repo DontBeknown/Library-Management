@@ -1,0 +1,8 @@
+mode: structured
+valueByMode:
+  structured:
+    staff_id:
+      value: '{{ui.publicAreaofrespondTable.editedRow.data.staff_id}}'
+    subcategory_id:
+      value: '{{ui.publicAreaofrespondTable.editedRow.data.subcategory_id}}'
+  custom: ''

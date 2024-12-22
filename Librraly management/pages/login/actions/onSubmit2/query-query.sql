@@ -1,0 +1,1 @@
+SELECT user_id FROM public.users WHERE username = {{ui.inputUser.value}} AND password = {{ui.inputPassword.value}};

@@ -1,0 +1,120 @@
+id: '17144390255090.2058430393249462'
+definitionId: form
+parentSlotId: '17144376517610.805894175873203'
+styles:
+  xl:
+    gridItem:
+      x: 17
+      y: 38
+      w: 6
+      h: 96
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 80
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicFields:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  entity: ''
+  name: ReserveForm
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Reserve
+  resetOnSubmit: true
+  submitBtnTitle: Add
+actions:
+  submitEvent:
+    - action: '17144392434870.6232253297969566'
+      paramCode: ''
+      index: 0
+slots:
+  - id: '17144390255090.44043496030600937'
+    name: structure
+    children:
+      - id: '17144393000800.6492810876153803'
+        definitionId: atomicDateTime
+        parentSlotId: '17144390255090.44043496030600937'
+        styles: {}
+        properties:
+          name: atomicDateTime9
+          prop: reserve_date
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          mappedValue: ''
+          editModeValue: moment()
+        index: 2
+        slots: []
+      - id: '17144392815470.5538061017583662'
+        definitionId: atomicNumber
+        parentSlotId: '17144390255090.44043496030600937'
+        styles: {}
+        properties:
+          name: atomicNumber42
+          prop: user_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []
+      - id: '17144392920270.9404221184545145'
+        definitionId: atomicNumber
+        parentSlotId: '17144390255090.44043496030600937'
+        styles: {}
+        properties:
+          name: atomicNumber43
+          prop: book_copy_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          editModeValue: '{{ui.publicBorrowingTable2.clickedRow.data.book_copy_id}}'
+        index: 1
+        slots: []
+      - id: '17144393129440.4088419919190107'
+        definitionId: atomicNumber
+        parentSlotId: '17144390255090.44043496030600937'
+        styles: {}
+        properties:
+          name: atomicNumber44
+          prop: staff_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          editModeValue: '{{state.staff_id}}'
+        index: 3
+        slots: []

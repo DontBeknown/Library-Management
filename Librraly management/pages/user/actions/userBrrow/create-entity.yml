@@ -1,0 +1,10 @@
+mode: structured
+valueByMode:
+  structured:
+    user_id:
+      value: '{{state.LoginUserId}}'
+    book_copy_id:
+      value: '{{ui.userReserveForm.value.book_copy_id}}'
+    borrow_date:
+      value: '{{moment()}}'
+  custom: ''

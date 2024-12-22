@@ -1,0 +1,6 @@
+mode: structured
+valueByMode:
+  structured:
+    is_available:
+      value: 'false'
+  custom: ''

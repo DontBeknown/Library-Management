@@ -1,0 +1,14 @@
+mode: structured
+valueByMode:
+  structured:
+    title:
+      value: '{{ui.NewBookPopup.value.Title}}'
+    publisher_id:
+      value: '{{ui.NewBookPopup.value.Publisher_ID}}'
+    publication_year:
+      value: '{{ui.NewBookPopup.value.Publish_Year}}'
+    subcategory_id:
+      value: '{{ui.NewBookPopup.value.Subcategory_ID}}'
+    isbn:
+      value: '{{ui.NewBookPopup.value.ISBN}}'
+  custom: ''

@@ -1,0 +1,57 @@
+id: '17145983387040.90486485322149'
+kind: workflow
+name: onDelete2
+nameConfigured: true
+steps:
+  - id: '17145983422080.9484855115375632'
+    type: DELETE_ENTITY
+    name: delete
+    params:
+      - type: datasourceId
+        value: UI Bakery Postgres
+        valueType: string
+      - type: resourceId
+        value: public.bookauthors
+        valueType: string
+      - type: filter
+        value:
+          - column: authors_id
+            operation: '='
+            value:
+              value: '{{ui.publicAuthorTable2.deletedRow.data.authors_id}}'
+        valueType: custom
+      - type: bulk
+        value: false
+        valueType: string
+      - type: customDatabaseName
+        value: ''
+        valueType: interpolatedValue
+      - type: successMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: failureMapper
+        value: ''
+        valueType: interpolatedValue
+      - type: mapperEnabled
+        value: false
+        valueType: custom
+    level: 0
+    fallthroughError: false
+    isChanged: true
+mode: manual
+modeConfigured: true
+parentPageId: '1'
+config:
+  shouldConfirm: false
+  confirmMessage: Are you sure you'd like to proceed with "{{actions.onDelete2.name}}"?
+  showSuccessToast: false
+  successToast: Action "{{actions.onDelete2.name}}" successfully executed
+  successToastDuration: '3000'
+  successToastHideByClick: false
+  showErrorToast: true
+  errorToast: Action "{{actions.onDelete2.name}}" has failed
+  errorToastDuration: '3000'
+  errorToastHideByClick: false
+  delay: '0'
+  runWhenFirstReferenced: true
+  preserveStateOnPageChange: false

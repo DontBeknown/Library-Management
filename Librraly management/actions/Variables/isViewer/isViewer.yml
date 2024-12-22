@@ -1,0 +1,11 @@
+id: '17146772792200.572796994121652'
+nameConfigured: true
+name: isViewer
+kind: store_item
+parentId: '17166419564000.2775234867949927'
+storeItem:
+  value: ''
+  valueType: boolean
+  initialValue: 'false'
+  version: 1
+steps: []

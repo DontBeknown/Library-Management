@@ -1,0 +1,8 @@
+mode: structured
+valueByMode:
+  structured:
+    floor:
+      value: '{{ui.locationForm.value.floor}}'
+    section:
+      value: '{{ui.locationForm.value.section}}'
+  custom: ''

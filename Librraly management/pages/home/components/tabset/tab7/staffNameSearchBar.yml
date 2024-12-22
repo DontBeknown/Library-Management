@@ -1,0 +1,52 @@
+id: '17146042408540.5897713623557992'
+definitionId: stringEdit
+parentSlotId: '17145440949160.4270490064248853'
+styles:
+  xl:
+    gridItem:
+      x: 2
+      y: 38
+      w: 6
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 507
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: staffNameSearchBar
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  labelWidth: 21
+  labelConfig:
+    text: Search
+    position: horizontal
+    align: left
+actions:
+  valueChange:
+    - action: '17145454183770.5124720060057564'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  enter: []
+  focusEvent: []
+  blurEvent: []
+  init: []
+slots: []

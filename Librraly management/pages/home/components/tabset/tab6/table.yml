@@ -1,0 +1,193 @@
+id: '17145430146200.6154605714230739'
+definitionId: smartTable
+parentSlotId: '17145021128740.48956810513903304'
+styles:
+  xl:
+    gridItem:
+      x: 2
+      y: 257
+      w: 21
+      h: 84
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 249
+      w: 24
+      h: 80
+    flex:
+      size:
+        widthValue: 500
+        widthUnit: px
+        heightValue: 320
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  dynamicColumns:
+    value: []
+    dataValue: |-
+      [
+        {
+          "prop": "id",
+          "type": "number",
+          "primaryKey": true
+        },
+        "name",
+        {
+          "prop": "avatar",
+          "type": "image"
+        },
+        {
+          "prop": "email",
+          "type": "link"
+        }
+      ]
+    withData: false
+  data: '{{actions.LoadreserveHistory.data}}'
+  name: table
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  title: Reserve history
+  showLoading:
+    withData: true
+    dataValue: 'false'
+    value: false
+  enableUserColumnResize:
+    value: true
+    dataValue: 'false'
+    withData: false
+  showExportAction:
+    value: false
+    dataValue: 'true'
+    withData: false
+  showReloadAction:
+    value: true
+    dataValue: 'false'
+    withData: false
+actions:
+  smartTableReload:
+    - action: '17145430479230.9397917216255351'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  init: []
+  smartTableCreate: []
+  smartTableEdit: []
+  smartTableBulkEdit: []
+  smartTableDelete: []
+  smartTableRowSelect: []
+  smartTableRowClick: []
+  uiOnRowDoubleClick: []
+  smartTablePageSelect: []
+  uiOnPageSizeChange: []
+  smartTableFilterChange: []
+  smartTableSortChange: []
+  uiOnCellChangeTrigger: []
+slots:
+  - id: '17145430146200.9739879447026962'
+    name: columns
+    children:
+      - id: '17145433810260.8881199055324973'
+        definitionId: atomicNumber
+        parentSlotId: '17145430146200.9739879447026962'
+        styles: {}
+        properties:
+          name: atomicNumber89
+          prop: reserve_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 0
+        slots: []
+      - id: '17145433820050.9243120362068602'
+        definitionId: atomicNumber
+        parentSlotId: '17145430146200.9739879447026962'
+        styles: {}
+        properties:
+          name: atomicNumber90
+          prop: user_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 1
+        slots: []
+      - id: '17145433833400.927609903958911'
+        definitionId: atomicNumber
+        parentSlotId: '17145430146200.9739879447026962'
+        styles: {}
+        properties:
+          name: atomicNumber91
+          prop: book_copy_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 2
+        slots: []
+      - id: '17145433839210.7070195915340982'
+        definitionId: atomicDateTime
+        parentSlotId: '17145430146200.9739879447026962'
+        styles: {}
+        properties:
+          name: atomicDateTime26
+          prop: reserve_date
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 3
+        slots: []
+      - id: '17145433849780.3869778562287325'
+        definitionId: atomicSelect
+        parentSlotId: '17145430146200.9739879447026962'
+        styles: {}
+        properties:
+          name: atomicSelect11
+          prop: status
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+          options:
+            value:
+              - value: Complete
+                color: basic
+                __UIBAKERY__SYSTEM_ID__: '17145433851100.6993271853026055'
+              - value: Cancelled
+                color: danger
+                __UIBAKERY__SYSTEM_ID__: '17150964496880.5652323202416119'
+              - value: Active
+                color: success
+                __UIBAKERY__SYSTEM_ID__: '17150964569720.018893658346280873'
+              - value: Pending
+                color: warning
+                __UIBAKERY__SYSTEM_ID__: '17152009053190.6313966170204299'
+            dataValue: |-
+              [
+                {
+                  value: 'Complete',
+                  color: 'primary'
+                }
+              ]
+            withData: false
+        index: 4
+        slots: []
+      - id: '17145433867560.3343025228889256'
+        definitionId: atomicNumber
+        parentSlotId: '17145430146200.9739879447026962'
+        styles: {}
+        properties:
+          name: atomicNumber92
+          prop: staff_id
+          __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+            - xl
+            - xs
+        index: 5
+        slots: []

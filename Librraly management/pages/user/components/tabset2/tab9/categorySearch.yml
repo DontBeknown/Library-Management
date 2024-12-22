@@ -1,0 +1,52 @@
+id: '17146619435880.5990082326688042'
+definitionId: stringEdit
+parentSlotId: '17146612829200.8343811554259382'
+styles:
+  xl:
+    gridItem:
+      x: 7
+      y: 33
+      w: 4
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+  xs:
+    gridItem:
+      x: 0
+      y: 175
+      w: 24
+      h: 9
+    flex:
+      size:
+        widthValue: auto
+        heightValue: 36
+        heightUnit: px
+      grow: '0'
+      shrink: '0'
+properties:
+  name: categorySearch
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  labelWidth: 34
+  labelConfig:
+    text: Category
+    position: horizontal
+    align: left
+actions:
+  valueChange:
+    - action: '17144157013530.2143329268987093'
+      paramCode: ''
+      blockPageLoad: false
+      preventDefault: false
+      index: 0
+  enter: []
+  focusEvent: []
+  blurEvent: []
+  init: []
+slots: []

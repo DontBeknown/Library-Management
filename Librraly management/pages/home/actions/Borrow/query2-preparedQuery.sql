@@ -1,0 +1,1 @@
+SELECT * FROM public.bookcopies WHERE book_copy_id = ? AND is_available = true;

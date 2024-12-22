@@ -1,0 +1,16 @@
+mode: structured
+valueByMode:
+  structured:
+    transaction_date:
+      value: '{{ui.popupForm.value.transaction_date}}'
+    amount:
+      value: '{{ui.popupForm.value.amount}}'
+    type:
+      value: '{{ui.popupForm.value.type}}'
+    category:
+      value: '{{ui.popupForm.value.category}}'
+    description:
+      value: '{{ui.popupForm.value.description}}'
+    staff_id:
+      value: '{{ui.popupForm.value.staff_id}}'
+  custom: ''

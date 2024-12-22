@@ -1,0 +1,33 @@
+id: '17144220952460.2025460643933319'
+definitionId: tab
+styles: {}
+properties:
+  name: tab2
+  title: Borrow and Return
+  __UIBAKERY__RESPONSIVE__SHOW__CONDITION__CODE__:
+    - xl
+    - xs
+  visible:
+    value: true
+    dataValue: |-
+      if({{state.adminData}} === "2" || {{state.adminData}} === "1")
+        return true
+      else
+        return false
+    withData: true
+parentSlotId: '17144220952460.935462285036265'
+index: 1
+slots:
+  - id: '17144220952460.6381969726610273'
+    name: content
+    children:
+      - publicBookcopiesTable.yml
+      - publicborrowingtableForm.yml
+      - publicBorrowingTable.yml
+      - publicborrowingtablePopupform.yml
+      - SearchBarBookCopies.yml
+      - nameBorrowSearchBar.yml
+      - BorrowTitleSearchBar.yml
+      - button5.yml
+      - BorrowStaaffSearchBar.yml
+      - deadLineDaysInput.yml
